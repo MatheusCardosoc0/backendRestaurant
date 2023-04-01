@@ -1,10 +1,10 @@
 import { User } from "@prisma/client";
 import { prisma } from "../../utils/prisma";
+import { RegisterUserProps } from "../../@types";
 
-type RegisterProps = Omit<User, "id">
 
 export class RegisterUserService{
-  async execute({email, name, password}: RegisterProps){
+  async execute({email, name, password}: RegisterUserProps){
     const user  = await prisma.user.findFirst({
       where: {
         email

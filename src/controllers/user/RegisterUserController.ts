@@ -1,10 +1,11 @@
 import { User } from "@prisma/client";
 import { Request, Response } from "express";
 import { RegisterUserService } from "../../services/user/RegisterUserService";
+import { RegisterUserProps } from "../../@types";
 
 export class RegisterUserController{
   async handle(req: Request, res: Response ){
-    const {email, name,  password}: User = req.body
+    const {email, name,  password}: RegisterUserProps = req.body
 
     const service = new RegisterUserService()
 

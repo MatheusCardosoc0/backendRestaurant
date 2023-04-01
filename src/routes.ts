@@ -4,7 +4,7 @@ import { RegisterUserController } from './controllers/user/RegisterUserControlle
 
 export const router = Router()
 
-router.get('/', (req, res) => {return res.json({name: "eeee"})})
+router.get('/', (req, res) => {return res.json({name: "dddd"})})
 
 router.post('/login', new LoginUserController().handle)
 router.post('/register', new RegisterUserController().handle)
